@@ -1,5 +1,3 @@
-"use client";
-
 import { Fjalla_One } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/shared/Navbar";

@@ -1,5 +1,3 @@
-"use client";
-
 import { Fjalla_One } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/shared/Navbar";
@@ -17,7 +15,6 @@ const fjallaOne = Fjalla_One({
 });
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <body className={`${fjallaOne.variable} antialiased bg-black`}>
