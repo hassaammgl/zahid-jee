@@ -119,3 +119,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.nav {
+  @apply bg-gradient-to-b from-black to-transparent;
+}
+
+.title{
+  @apply bg-gradient-to-r from-[#ffff00] to-slate-100 bg-clip-text text-transparent;
+}
