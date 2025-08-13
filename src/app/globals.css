@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-primary-color: #ffff00;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -124,6 +128,18 @@
   @apply bg-gradient-to-b from-black to-transparent;
 }
 
-.title{
+.title {
   @apply bg-gradient-to-r from-[#ffff00] to-slate-100 bg-clip-text text-transparent;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.br-test {
+  border: 1px solid red;
 }
