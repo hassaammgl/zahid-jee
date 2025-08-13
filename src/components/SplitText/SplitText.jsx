@@ -1,6 +1,6 @@
 "use client"
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText as GSAPSplitText } from "gsap/SplitText";
 
@@ -18,7 +18,8 @@ const SplitText = ({
   threshold = 0.1,
   rootMargin = "-100px",
   textAlign = "center",
-  onLetterAnimationComplete,
+  onAnimationComplete,
+  as: Component = "p", // Added customizable root element
 }) => {
   const ref = useRef(null);
   const animationCompletedRef = useRef(false);
@@ -28,8 +29,10 @@ const SplitText = ({
     if (typeof window === "undefined" || !ref.current || !text) return;
 
     const el = ref.current;
-    
     animationCompletedRef.current = false;
+
+    // Immediately hide element to prevent FOUC
+    gsap.set(el, { visibility: "hidden" });
 
     const absoluteLines = splitType === "lines";
     if (absoluteLines) el.style.position = "relative";
@@ -43,38 +46,34 @@ const SplitText = ({
       });
     } catch (error) {
       console.error("Failed to create SplitText:", error);
+      gsap.set(el, { visibility: "visible" }); // Ensure element remains visible
       return;
     }
 
     let targets;
     switch (splitType) {
-      case "lines":
-        targets = splitter.lines;
-        break;
-      case "words":
-        targets = splitter.words;
-        break;
-      case "chars":
-        targets = splitter.chars;
-        break;
-      default:
-        targets = splitter.chars;
+      case "lines": targets = splitter.lines; break;
+      case "words": targets = splitter.words; break;
+      case "chars": targets = splitter.chars; break;
+      default: targets = splitter.chars;
     }
 
     if (!targets || targets.length === 0) {
       console.warn("No targets found for SplitText animation");
       splitter.revert();
+      gsap.set(el, { visibility: "visible" });
       return;
     }
 
-    targets.forEach((t) => {
-      t.style.willChange = "transform, opacity";
-    });
+    // Apply initial state immediately to prevent FOUC
+    gsap.set(targets, { ...from, force3D: true });
+    gsap.set(el, { visibility: "visible" });
 
+    // Calculate scroll trigger start position
     const startPct = (1 - threshold) * 100;
-    const marginMatch = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin);
+    const marginMatch = rootMargin.match(/^(-?\d+)(.*)$/);
     const marginValue = marginMatch ? parseFloat(marginMatch[1]) : 0;
-    const marginUnit = marginMatch ? (marginMatch[2] || "px") : "px";
+    const marginUnit = marginMatch?.[2] || "px";
     const sign = marginValue < 0 ? `-=${Math.abs(marginValue)}${marginUnit}` : `+=${marginValue}${marginUnit}`;
     const start = `top ${startPct}%${sign}`;
 
@@ -84,23 +83,16 @@ const SplitText = ({
         start,
         toggleActions: "play none none none",
         once: true,
-        onToggle: (self) => {
-          scrollTriggerRef.current = self;
-        },
+        onToggle: self => scrollTriggerRef.current = self,
       },
       smoothChildTiming: true,
       onComplete: () => {
         animationCompletedRef.current = true;
-        gsap.set(targets, {
-          ...to,
-          clearProps: "willChange",
-          immediateRender: true,
-        });
-        onLetterAnimationComplete?.();
-      },
+        gsap.set(targets, { clearProps: "willChange" });
+        onAnimationComplete?.();
+      }
     });
 
-    tl.set(targets, { ...from, immediateRender: false, force3D: true });
     tl.to(targets, {
       ...to,
       duration,
@@ -111,14 +103,9 @@ const SplitText = ({
 
     return () => {
       tl.kill();
-      if (scrollTriggerRef.current) {
-        scrollTriggerRef.current.kill();
-        scrollTriggerRef.current = null;
-      }
+      scrollTriggerRef.current?.kill();
       gsap.killTweensOf(targets);
-      if (splitter) {
-        splitter.revert();
-      }
+      splitter?.revert();
     };
   }, [
     text,
@@ -130,11 +117,11 @@ const SplitText = ({
     to,
     threshold,
     rootMargin,
-    onLetterAnimationComplete,
+    onAnimationComplete,
   ]);
 
   return (
-    <p
+    <Component
       ref={ref}
       className={`split-parent overflow-hidden inline-block whitespace-normal ${className}`}
       style={{
@@ -143,7 +130,7 @@ const SplitText = ({
       }}
     >
       {text}
-    </p>
+    </Component>
   );
 };
 

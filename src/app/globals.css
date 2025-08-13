@@ -132,6 +132,10 @@
   @apply bg-gradient-to-r from-[#ffff00] to-slate-100 bg-clip-text text-transparent;
 }
 
+.bottom-gradient-sec {
+  @apply bg-gradient-to-t from-black to-transparent;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -140,6 +144,7 @@
     transform: rotate(360deg);
   }
 }
+
 .br-test {
   border: 1px solid red;
 }
