@@ -50,13 +50,13 @@ export default function Home() {
         <div className="w-screen mb-10">
           <h2
             ref={titleRef}
-            className="selection:bg-black selection:text-white text-[10vw] pl-4 leading-40 mt-40 font-extrabold font-[Oswald]"
+            className="selection:bg-black selection:text-white text-[12vw] pl-4 leading-40 mt-40 font-extrabold font-[Oswald]"
           >
             ZAHIDJEE TEXTILE
           </h2>
           <h2
             ref={titleRef2}
-            className="selection:bg-black selection:text-white text-end text-[10vw] pr-4 font-extrabold font-[Oswald]"
+            className="selection:bg-black selection:text-white text-end text-[12vw] pr-4 font-extrabold font-[Oswald]"
           >
             MILLS LIMITED
           </h2>

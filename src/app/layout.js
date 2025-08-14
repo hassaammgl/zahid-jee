@@ -1,4 +1,4 @@
-import { Oswald, Fjalla_One,Bodoni_Moda } from "next/font/google";
+import { Oswald, Fjalla_One,Bodoni_Moda, Tangerine, Birthstone } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/shared/Navbar";
 import gsap from "gsap";
@@ -27,6 +27,19 @@ const oswald = Oswald({
   subsets: ['latin'],
   weight: ['200', '300', '400', '500', '600', '700'],
   variable: '--font-oswald',
+});
+
+const tangerine = Tangerine({
+  subsets: ['latin'],
+  weight: ['400', '700'], // Tangerine comes in Regular (400) and Bold (700)
+  variable: '--font-tangerine',
+});
+
+// Configure Birthstone Bounce (decorative style)
+const birthstone = Birthstone_Bounce({
+  subsets: ['latin'],
+  weight: '400', // Only one weight available
+  variable: '--font-birthstone',
 });
 
 export const metadata = {
