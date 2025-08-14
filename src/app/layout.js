@@ -1,4 +1,4 @@
-import { Oswald, Fjalla_One,Bodoni_Moda, Tangerine, Birthstone } from "next/font/google";
+import { Oswald, Fjalla_One, Bodoni_Moda, Tangerine, Birthstone } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/shared/Navbar";
 import gsap from "gsap";
@@ -31,14 +31,13 @@ const oswald = Oswald({
 
 const tangerine = Tangerine({
   subsets: ['latin'],
-  weight: ['400', '700'], // Tangerine comes in Regular (400) and Bold (700)
+  weight: ['400', '700'],
   variable: '--font-tangerine',
 });
 
-// Configure Birthstone Bounce (decorative style)
-const birthstone = Birthstone_Bounce({
+const birthstone = Birthstone({
   subsets: ['latin'],
-  weight: '400', // Only one weight available
+  weight: '400',
   variable: '--font-birthstone',
 });
 
@@ -51,7 +50,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${oswald.variable} ${fjallaOne.variable} ${bodoniModa.variable} antialiased bg-black`}>
+      <body className={`${oswald.variable} ${fjallaOne.variable} ${bodoniModa.variable} ${birthstone.variable} ${tangerine.variable} antialiased bg-black`}>
         <PageWrapper>
           <Navbar />
           {children}
