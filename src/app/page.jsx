@@ -71,6 +71,15 @@ export default function Home() {
         </div>
         <div className="bottom-gradient-sec absolute -bottom-2 w-screen h-40" />
       </section>
+        <section className=" h-screen flex items-end">
+          <SplitText
+            as="h1"
+            delay={2}
+            text={"this is textd fdfhgfdg"}
+            duration={1}
+            className=" text-9xl text-white"
+          />
+        </section>
       <section className=" h-screen flex items-end">
         {/* <SplitText
           as="h1"
@@ -81,15 +90,6 @@ export default function Home() {
           className=" text-9xl text-white"
         /> */}
         <CircularGallery  bend={3} textColor="#ffffff" borderRadius={0} scrollEase={0.02}/>
-      </section>
-      <section className=" h-screen flex items-end">
-        <SplitText
-          as="h1"
-          delay={2}
-          text={"this is textd fdfhgfdg"}
-          duration={1}
-          className=" text-9xl text-white"
-        />
       </section>
       <section className=" h-screen flex items-end">
         <SplitText
