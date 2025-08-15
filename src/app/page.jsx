@@ -1,18 +1,18 @@
-import dynamic from 'next/dynamic'
-const Hero = dynamic(() => import('@/shared/home/Hero'), {
+import dynamic from "next/dynamic";
+const Hero = dynamic(() => import("@/shared/home/Hero"), {
   loading: () => <p>Loading...</p>,
-})
+});
 
-const About = dynamic(() => import('@/shared/home/About'), {
+const About = dynamic(() => import("@/shared/home/About"), {
   loading: () => <p>Loading...</p>,
-})
+});
 
-const Gallery = dynamic(() => import('@/shared/home/Gallery'), {
+const Gallery = dynamic(() => import("@/shared/home/Gallery"), {
   loading: () => <p>Loading...</p>,
-})
+});
+import ScrollVelocity from "@/components/ScrollVelocity/ScrollVelocity";
 
 export default function Home() {
-
   return (
     <main className="relative w-screen">
       <video
@@ -25,6 +25,10 @@ export default function Home() {
       <Hero />
       <About />
       <Gallery />
+      <ScrollVelocity
+        texts={["Spinning, Weaving, Finishing, Stitching & Power Generation", "ZAHIDJEE TEXTILE MILLS LTD"]}
+        className="custom-scroll-text text-white/80 p-10 font-[Tangerine]"
+      />
     </main>
   );
 }

@@ -13,6 +13,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { SplitText } from "gsap/all";
 import PageWrapper from "@/wrapper/PageWrapper";
+import Footer from "@/shared/Footer";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
         <PageWrapper>
           <Navbar />
           {children}
+          <Footer />
         </PageWrapper>
       </body>
     </html>

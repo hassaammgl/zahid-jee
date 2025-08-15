@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const navs = [
+export const navs = [
   {
     path: "/",
     name: "Home",
@@ -42,8 +42,7 @@ const navs = [
 
 const Navbar = () => {
   return (
-    <nav className="nav w-screen flex flex-col fixed z-10 font-[Fjalla_One] pt-6">
-      {/* <div className="border-[#ffff00] border-2 w-screen h-1" /> */}
+    <header className="nav w-screen flex flex-col fixed z-10 font-[Fjalla_One] pt-6">
       <div className="flex justify-center items-center gap-4 mt-2">
         <Image
           src={"/logo1.png"}
@@ -56,7 +55,7 @@ const Navbar = () => {
           ZAHIDJEE TEXTILE MILLS
         </h1>
       </div>
-      <div className="text-white font-light flex justify-center items-center mt-4 gap-8">
+      <nav className="text-white font-light flex justify-center items-center mt-4 gap-8">
         {navs.map((nav, i) => (
           <Link
             key={nav._id}
@@ -66,8 +65,8 @@ const Navbar = () => {
             {nav.name}
           </Link>
         ))}
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
