@@ -16,7 +16,7 @@ export default function Divisions() {
   return (
     <>
       <title>DIVISIONS</title>
-      <main className="relative w-screen">
+      <main className="relative w-screen h-full">
         <Spinning />
         <Weaving />
         <Finishing />
