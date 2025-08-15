@@ -333,18 +333,13 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `/imgs/1.jpg`, text: "Bridge" },
-      { image: `/imgs/2.jpg`, text: "Desk Setup" },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: "Waterfall" },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: "Strawberries" },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: "Deep Diving" },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: "Train Track" },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: "Santorini" },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: "Blurry Lights" },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: "New York" },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: "Good Boy" },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: "Coastline" },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: "Palm Trees" },
+      { image: `/imgs/stitch.jpg`, text: "Stitching" },
+      { image: `/imgs/spinning.jpg`, text: "Spinning" },
+      { image: `/imgs/yarn.jpg`, text: "Yarns" },
+      { image: `/imgs/room.jpg`, text: "Room" },
+      { image: `/imgs/pillow.jpg`, text: "Pillows" },
+      { image: `/imgs/fabrics.avif`, text: "Fabrics" },
+      { image: `/imgs/garmets.jpg`, text: "Garments" },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

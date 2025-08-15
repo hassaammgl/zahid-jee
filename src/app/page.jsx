@@ -16,6 +16,8 @@ export default function Home() {
       <Hero />
       <About />
       <Gallery />
+      <About />
+      <About />
     </main>
   );
 }
