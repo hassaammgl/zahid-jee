@@ -333,14 +333,14 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `/imgs/stitch.jpg`, text: "Stitching" },
-      { image: `/imgs/spinning.jpg`, text: "Spinning" },
-      { image: `/imgs/yarn.jpg`, text: "Yarns" },
-      { image: `/imgs/room.jpg`, text: "Room" },
-      { image: `/imgs/pillow.jpg`, text: "Pillows" },
-      { image: `/imgs/fabrics.avif`, text: "Fabrics" },
-      { image: `/imgs/garmets.jpg`, text: "Garments" },
-    ];
+  { image: `/imgs/stitch.jpg`, text: "STITCHING" },
+  { image: `/imgs/spinning.jpg`, text: "SPINNING" },
+  { image: `/imgs/yarn.jpg`, text: "YARNS" },
+  { image: `/imgs/room.jpg`, text: "ROOM" },
+  { image: `/imgs/pillow.jpg`, text: "PILLOWS" },
+  { image: `/imgs/fabrics.avif`, text: "FABRICS" },
+  { image: `/imgs/garmets.jpg`, text: "GARMENTS" },
+];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
     this.medias = this.mediasImages.map((data, index) => {

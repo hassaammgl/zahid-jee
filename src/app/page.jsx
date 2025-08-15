@@ -1,6 +1,15 @@
-import Hero from "@/shared/home/Hero";
-import About from "@/shared/home/About";
-import Gallery from "@/shared/home/Gallery";
+import dynamic from 'next/dynamic'
+const Hero = dynamic(() => import('@/shared/home/Hero'), {
+  loading: () => <p>Loading...</p>,
+})
+
+const About = dynamic(() => import('@/shared/home/About'), {
+  loading: () => <p>Loading...</p>,
+})
+
+const Gallery = dynamic(() => import('@/shared/home/Gallery'), {
+  loading: () => <p>Loading...</p>,
+})
 
 export default function Home() {
 
@@ -16,8 +25,6 @@ export default function Home() {
       <Hero />
       <About />
       <Gallery />
-      <About />
-      <About />
     </main>
   );
 }
