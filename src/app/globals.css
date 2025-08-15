@@ -148,3 +148,11 @@
 .br-test {
   border: 1px solid red;
 }
+
+.about-textures {
+  background-image: url(/ceo.jpeg);
+  @apply bg-center;
+  background-size: 120%; /* Allows movement without showing edges */
+  background-repeat: no-repeat;
+  transition: background 0.5s ease; /* Smooth background changes */
+}
