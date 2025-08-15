@@ -26,7 +26,10 @@ export default function Home() {
       <About />
       <Gallery />
       <ScrollVelocity
-        texts={["Spinning, Weaving, Finishing, Stitching & Power Generation", "ZAHIDJEE TEXTILE MILLS LTD"]}
+        texts={[
+          "Spinning, Weaving, Finishing, Stitching & Power Generation",
+          "ZAHIDJEE TEXTILE MILLS LTD",
+        ]}
         className="custom-scroll-text text-white/80 p-10 font-[Tangerine]"
       />
     </main>

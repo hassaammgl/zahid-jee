@@ -56,7 +56,7 @@ const Navbar = () => {
         </h1>
       </div>
       <nav className="text-white font-light flex justify-center items-center mt-4 gap-8">
-        {navs.map((nav, i) => (
+        {navs.map((nav) => (
           <Link
             key={nav._id}
             className="hover:opacity-75 hover:text-[#ffff00] transition-all ease-in-out duration-700"
