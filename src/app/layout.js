@@ -4,7 +4,8 @@ import {
   Bodoni_Moda,
   Tangerine,
   Birthstone,
-  Poiret_One
+  Poiret_One,
+  Special_Gothic_Expanded_One
 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/shared/Navbar";
@@ -55,6 +56,12 @@ const poiretOne = Poiret_One({
   variable: '--font-poiret-one', // CSS variable name
 });
 
+const gothicOne = Special_Gothic_Expanded_One({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-gothic-one',
+});
+
 export const metadata = {
   title: "ZAHIDJEE TEXTILE MILLS",
   description:
@@ -65,7 +72,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${oswald.variable} ${fjallaOne.variable} ${bodoniModa.variable} ${birthstone.variable} ${tangerine.variable} ${poiretOne.variable} antialiased bg-black`}
+        className={`${oswald.variable} ${gothicOne.variable} ${fjallaOne.variable} ${bodoniModa.variable} ${birthstone.variable} ${tangerine.variable} ${poiretOne.variable} antialiased bg-black`}
       >
         <PageWrapper>
           <Navbar />
