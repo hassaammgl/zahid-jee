@@ -68,16 +68,16 @@ const Spinning = () => {
         </p>
         <Image
           ref={img1Ref}
-          src={"/imgs/room.jpg"}
-          className="object-fill absolute bottom-12 right-20 mix-blend-exclusion"
+          src={"/devisions/spinning.jpg"}
+          className="object-fill  absolute bottom-12 right-20 mix-blend-exclusion"
           height={100}
           width={300}
           alt=""
         />
         <Image
           ref={img2Ref}
-          src={"/imgs/yarn.jpg"}
-          className="object-fill absolute top-24 left-28 mix-blend-exclusion"
+          src={"/devisions/spinning2.jpg"}
+          className="object-fill  absolute top-24 left-28 mix-blend-exclusion"
           height={100}
           width={400}
           alt=""

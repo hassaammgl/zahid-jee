@@ -1,13 +1,27 @@
-import React from "react";
+"use client";
+import { useRef } from "react";
 import Image from "next/image";
 import SplitText from "@/components/SplitText/SplitText";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Finishing = () => {
+  const img1Ref = useRef();
+  const img2Ref = useRef();
+  useGSAP(() => {
+    gsap.from([img1Ref.current, img2Ref.current], {
+      clipPath: "inset(100% 0 0 0)",
+      y: 400,
+      delay: -1,
+      opacity: 0,
+      duration: 3,
+      ease: "circ.inOut",
+      stagger: 0,
+    });
+  });
+
   return (
     <div className="h-screen relative text-white flex justify-center items-center">
-      {/* <h2 className="absolute leading-52 text-white/40 text-[12vw] text-center font-[Special_Gothic_Expanded_One]">
-        Finishing & Stitching
-      </h2> */}
       <SplitText
         text={"Finishing & Stitching"}
         as="h2"
@@ -15,7 +29,7 @@ const Finishing = () => {
         className="absolute leading-52 text-white/40 text-[12vw] text-center font-[Special_Gothic_Expanded_One]"
       />
       <div className="flex justify-center items-center w-screen">
-          <SplitText
+        <SplitText
           splitType="words"
           text={
             "We have a capacity of bleaching, dyeing and printing 150,000 meters daily with modern day machinery. It is capable to process 100% cotton and poly-cotton blended fabrics. We have a stitching unit with 300          state of the art machinery capable of filling up a 40FT container on a daily basis."

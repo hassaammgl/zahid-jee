@@ -1,8 +1,26 @@
-import React from "react";
+"use client";
+import { useRef } from "react";
 import Image from "next/image";
 import SplitText from "@/components/SplitText/SplitText";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Weaving = () => {
+  const img1Ref = useRef();
+  const img2Ref = useRef();
+
+  useGSAP(() => {
+    gsap.from([img1Ref.current, img2Ref.current], {
+      clipPath: "inset(100% 0 0 0)",
+      y: 400,
+      delay: -1,
+      opacity: 0,
+      duration: 3,
+      ease: "circ.inOut",
+      stagger: 0,
+    });
+  });
+
   return (
     <div className="h-screen relative text-white flex justify-center items-center">
       <SplitText
@@ -19,14 +37,16 @@ const Weaving = () => {
           className="font-[Bodoni_Moda] text-4xl w-1/2 text-center"
         />
         <Image
-          src={"/imgs/room.jpg"}
+          src={"/devisions/weaving.avif"}
           className="object-fill absolute bottom-12 right-20 mix-blend-exclusion"
           height={100}
           width={300}
+          ref={img1Ref}
           alt=""
         />
         <Image
-          src={"/imgs/yarn.jpg"}
+          src={"/devisions/weaving3.jpg"}
+          ref={img2Ref}
           className="object-fill absolute top-24 left-28 mix-blend-exclusion"
           height={100}
           width={400}
