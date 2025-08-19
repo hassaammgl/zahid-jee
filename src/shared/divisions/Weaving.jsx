@@ -8,9 +8,10 @@ import { useGSAP } from "@gsap/react";
 const Weaving = () => {
   const img1Ref = useRef();
   const img2Ref = useRef();
+  const img3Ref = useRef();
 
   useGSAP(() => {
-    gsap.from([img1Ref.current, img2Ref.current], {
+    gsap.from([img1Ref.current, img2Ref.current, img3Ref.current], {
       clipPath: "inset(100% 0 0 0)",
       y: 400,
       delay: -1,
@@ -38,7 +39,7 @@ const Weaving = () => {
         />
         <Image
           src={"/devisions/weaving.avif"}
-          className="object-fill absolute bottom-12 right-20 mix-blend-exclusion"
+          className="object-fill absolute bottom-12 left-20 mix-blend-exclusion"
           height={100}
           width={300}
           ref={img1Ref}
@@ -47,9 +48,17 @@ const Weaving = () => {
         <Image
           src={"/devisions/weaving3.jpg"}
           ref={img2Ref}
-          className="object-fill absolute top-24 left-28 mix-blend-exclusion"
+          className="object-fill absolute top-24 right-18 mix-blend-exclusion"
           height={100}
           width={400}
+          alt=""
+        />
+        <Image
+          src={"/devisions/weaving2.jpg"}
+          ref={img3Ref}
+          className="object-fill absolute top-14 right-1/2 mix-blend-exclusion"
+          height={100}
+          width={200}
           alt=""
         />
       </div>

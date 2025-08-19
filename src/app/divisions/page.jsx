@@ -19,7 +19,7 @@ export default function Divisions() {
       <main className="relative w-screen h-full">
         <Spinning />
         <Weaving />
-        {/* <Finishing /> */}
+        <Finishing />
         {/* <Power /> */}
       </main>
     </>
