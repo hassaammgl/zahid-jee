@@ -20,7 +20,7 @@ export default function Divisions() {
         <Spinning />
         <Weaving />
         <Finishing />
-        {/* <Power /> */}
+        <Power />
       </main>
     </>
   );
