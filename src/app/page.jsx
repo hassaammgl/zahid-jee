@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+
 const Hero = dynamic(() => import("@/shared/home/Hero"), {
   loading: () => <p>Loading...</p>,
 });
@@ -10,6 +11,7 @@ const About = dynamic(() => import("@/shared/home/About"), {
 const Gallery = dynamic(() => import("@/shared/home/Gallery"), {
   loading: () => <p>Loading...</p>,
 });
+
 import ScrollVelocity from "@/components/ScrollVelocity/ScrollVelocity";
 
 export default function Home() {

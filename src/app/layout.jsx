@@ -70,8 +70,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <body
+        suppressHydrationWarning
         className={`${oswald.variable} ${gothicOne.variable} ${fjallaOne.variable} ${bodoniModa.variable} ${birthstone.variable} ${tangerine.variable} ${poiretOne.variable} antialiased`}
       >
         <PageWrapper>
