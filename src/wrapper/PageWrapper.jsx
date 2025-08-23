@@ -20,7 +20,7 @@ const PageWrapper = ({ children }) => {
   }, []);
   return (
     <div id="smooth-wrapper">
-      <div id="smooth-content">{children}</div>
+      <div id="smooth-content" className="bg-black">{children}</div>
     </div>
   );
 };

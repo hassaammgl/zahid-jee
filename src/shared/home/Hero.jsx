@@ -40,7 +40,7 @@ const Hero = () => {
   });
 
   return (
-    <section className="relative h-screen flex items-center text-white">
+    <section className=" relative h-screen flex items-center text-white">
       <div className="w-screen mb-10">
         <h2
           ref={titleRef}

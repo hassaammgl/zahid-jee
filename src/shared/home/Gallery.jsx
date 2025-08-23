@@ -3,7 +3,7 @@ import SplitText from "@/components/SplitText/SplitText";
 
 const Gallery = () => {
   return (
-    <section className="h-screen flex flex-col w-screen justify-center items-center">
+    <section className="h-screen bg-black flex flex-col w-screen justify-center items-center">
       <SplitText
         as="h1"
         delay={2}

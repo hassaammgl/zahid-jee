@@ -1,3 +1,4 @@
+import "./globals.css";
 import {
   Oswald,
   Fjalla_One,
@@ -7,7 +8,6 @@ import {
   Poiret_One,
   Special_Gothic_Expanded_One
 } from "next/font/google";
-import "./globals.css";
 import Navbar from "@/shared/Navbar";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${oswald.variable} ${gothicOne.variable} ${fjallaOne.variable} ${bodoniModa.variable} ${birthstone.variable} ${tangerine.variable} ${poiretOne.variable} antialiased bg-black`}
+        className={`${oswald.variable} ${gothicOne.variable} ${fjallaOne.variable} ${bodoniModa.variable} ${birthstone.variable} ${tangerine.variable} ${poiretOne.variable} antialiased`}
       >
         <PageWrapper>
           <Navbar />
