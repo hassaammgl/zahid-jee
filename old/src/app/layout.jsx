@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
         <PageWrapper>
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </PageWrapper>
       </body>
     </html>

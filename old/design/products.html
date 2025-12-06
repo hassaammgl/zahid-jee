@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahidjee Textile Mills Ltd | Products</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B1120',
+                        gold: '#C5A059',
+                        goldLight: '#E5D4B3',
+                        slate: '#F1F5F9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-products': "linear-gradient(rgba(11, 17, 32, 0.8), rgba(11, 17, 32, 0.5)), url('https://images.unsplash.com/photo-1596323143329-847240c4365d?q=80&w=2000&auto=format&fit=crop')",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 antialiased selection:bg-gold selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full top-0 z-50 transition-all duration-300 bg-navy/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 border border-gold flex items-center justify-center text-gold font-serif text-2xl font-bold group-hover:bg-gold group-hover:text-navy transition-all">Z</div>
+                <div class="leading-tight">
+                    <span class="block font-serif font-bold text-xl text-white tracking-wide">ZAHIDJEE</span>
+                    <span class="block text-[10px] text-gold uppercase tracking-[0.2em]">Textile Mills Ltd</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex gap-8 text-sm font-medium uppercase tracking-widest text-gray-300">
+                <a href="index.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Home</a>
+                <a href="divisions.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Divisions</a>
+                <a href="products.html" class="text-gold border-b border-gold pb-1">Products</a>
+                <a href="governance.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Governance</a>
+                <a href="investors.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Investors</a>
+                <a href="media.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Media</a>
+                <a href="contact.html" class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-navy transition-all">Contact</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="lg:hidden text-gold text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <section class="relative pt-40 pb-20 bg-hero-products bg-cover bg-center text-center">
+        <div class="max-w-4xl mx-auto px-6 relative z-10 animate-fade-in">
+            <span class="text-gold uppercase tracking-[0.3em] text-sm font-bold">Premium Quality</span>
+            <h1 class="text-5xl md:text-6xl font-serif font-bold text-white mt-4 mb-6">Our Portfolio</h1>
+            <p class="text-gray-300 text-lg font-light max-w-2xl mx-auto">
+                From finest yarns to luxurious home textiles, our products define excellence in the global textile market.
+            </p>
+        </div>
+    </section>
+
+    <!-- PRODUCT CATALOG -->
+    <main class="py-20 overflow-hidden">
+        
+        <!-- PRODUCT 1: YARN -->
+        <section class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Text Content -->
+                    <div class="product-text opacity-0 translate-y-10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-navy text-gold flex items-center justify-center text-3xl rounded-full">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                            <h2 class="text-4xl font-serif font-bold text-navy">Yarn Products</h2>
+                        </div>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                            We produce premium quality yarn ranging from coarse to fine counts. Our spinning units are optimized for producing Carded, Combed, Siro, Lycra, and Slub yarns. These are widely used in the manufacturing of Denim and Knitting products globally.
+                        </p>
+                        
+                        <h3 class="font-bold text-navy uppercase tracking-widest text-sm mb-4">Product Varieties</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-slate text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">100% Cotton</span>
+                            <span class="px-4 py-2 bg-slate text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Polyester Cotton (PC)</span>
+                            <span class="px-4 py-2 bg-slate text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Chief Value Cotton (CVC)</span>
+                            <span class="px-4 py-2 bg-slate text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Slub & Siro</span>
+                            <span class="px-4 py-2 bg-slate text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Lycra Blends</span>
+                        </div>
+                    </div>
+
+                    <!-- Visual -->
+                    <div class="relative product-img opacity-0 translate-x-10">
+                        <div class="absolute top-0 right-0 w-3/4 h-full bg-gold/10 -z-10 rounded-r-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1629196914375-f7e48f477b6d?q=80&w=1000" class="rounded-lg shadow-2xl w-full object-cover h-[500px] hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT 2: FABRIC -->
+        <section class="py-20 bg-slate relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Visual -->
+                    <div class="order-2 lg:order-1 relative product-img opacity-0 -translate-x-10">
+                        <div class="absolute top-0 left-0 w-3/4 h-full bg-navy/5 -z-10 rounded-l-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1620799140408-ed5341cd2431?q=80&w=1000" class="rounded-lg shadow-2xl w-full object-cover h-[500px] hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="order-1 lg:order-2 product-text opacity-0 translate-y-10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-white border border-gray-200 text-gold flex items-center justify-center text-3xl rounded-full shadow-sm">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h2 class="text-4xl font-serif font-bold text-navy">Fabric Products</h2>
+                        </div>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                            Our weaving division creates the canvas for luxury. We produce high-quality Greige and Processed fabrics using state-of-the-art Air Jet Looms. From basic weaves to complex dobbies, our fabrics are known for their durability and flawless finish.
+                        </p>
+                        
+                        <h3 class="font-bold text-navy uppercase tracking-widest text-sm mb-4">Weave Types</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-white text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Percale (T-180 to T-400)</span>
+                            <span class="px-4 py-2 bg-white text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Satin / Sateen</span>
+                            <span class="px-4 py-2 bg-white text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Twill & Drill</span>
+                            <span class="px-4 py-2 bg-white text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Duck Fabric</span>
+                            <span class="px-4 py-2 bg-white text-navy rounded-full text-sm font-medium border border-gray-200 hover:border-gold transition-colors">Dobby Designs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT 3: FINISHED -->
+        <section class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Text Content -->
+                    <div class="product-text opacity-0 translate-y-10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-navy text-gold flex items-center justify-center text-3xl rounded-full">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <h2 class="text-4xl font-serif font-bold text-navy">Finished Products</h2>
+                        </div>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                            We are specialists in Home Textiles. Our stitching units transform our premium fabrics into luxurious bedding and linen products. We export to top retailers in the USA, Europe, and UK, ensuring every stitch meets international quality standards.
+                        </p>
+                        
+                        <h3 class="font-bold text-navy uppercase tracking-widest text-sm mb-4">Collection</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 p-3 border border-gray-100 rounded hover:shadow-md transition-shadow">
+                                <i class="fas fa-check text-gold"></i> Bed Sheets & Sets
+                            </div>
+                            <div class="flex items-center gap-3 p-3 border border-gray-100 rounded hover:shadow-md transition-shadow">
+                                <i class="fas fa-check text-gold"></i> Duvet Covers
+                            </div>
+                            <div class="flex items-center gap-3 p-3 border border-gray-100 rounded hover:shadow-md transition-shadow">
+                                <i class="fas fa-check text-gold"></i> Curtains
+                            </div>
+                            <div class="flex items-center gap-3 p-3 border border-gray-100 rounded hover:shadow-md transition-shadow">
+                                <i class="fas fa-check text-gold"></i> Kitchen Linen
+                            </div>
+                            <div class="flex items-center gap-3 p-3 border border-gray-100 rounded hover:shadow-md transition-shadow">
+                                <i class="fas fa-check text-gold"></i> Institutional Linen
+                            </div>
+                            <div class="flex items-center gap-3 p-3 border border-gray-100 rounded hover:shadow-md transition-shadow">
+                                <i class="fas fa-check text-gold"></i> Pillow Cases
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual -->
+                    <div class="relative product-img opacity-0 translate-x-10">
+                        <div class="absolute bottom-0 left-0 w-3/4 h-full bg-gold/10 -z-10 rounded-l-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1522771753035-4a50423a5a63?q=80&w=1000" class="rounded-lg shadow-2xl w-full object-cover h-[500px] hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CONTACT CTA -->
+    <section class="py-20 bg-navy">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-serif font-bold text-white mb-6">Interested in our products?</h2>
+            <p class="text-gray-400 mb-8">Contact our sales team for inquiries, quotes, or catalog requests.</p>
+            <a href="contact.html" class="inline-block px-10 py-4 border border-gold text-gold font-bold tracking-widest uppercase hover:bg-gold hover:text-navy transition-colors duration-300">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="text-4xl text-gold font-serif font-bold">Z</div>
+                    <div>
+                        <span class="block font-serif font-bold text-2xl tracking-wide">ZAHIDJEE</span>
+                        <span class="block text-[10px] text-gold uppercase tracking-[0.2em]">Textile Mills Ltd</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 max-w-sm">
+                    Weaving excellence since 1987. A testament to Pakistan's industrial potential and global textile dominance.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-gold font-bold uppercase tracking-widest mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="divisions.html" class="hover:text-white transition-colors">Divisions</a></li>
+                    <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                    <li><a href="investors.html" class="hover:text-white transition-colors">Investor Relations</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-gold font-bold uppercase tracking-widest mb-6">Contact</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><i class="fas fa-map-marker-alt w-5"></i> Lahore, Pakistan</li>
+                    <li><i class="fas fa-phone w-5"></i> +92 42 35777290</li>
+                    <li><i class="fas fa-envelope w-5"></i> mis@zahidjee.com.pk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 text-center text-xs text-gray-500 uppercase tracking-widest">
+            &copy; 2025 Zahidjee Textile Mills Limited. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header
+        gsap.from(".animate-fade-in", {
+            y: 30, opacity: 0, duration: 1, delay: 0.2, ease: "power3.out"
+        });
+
+        // Product Sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            const img = section.querySelector('.product-img');
+            const text = section.querySelector('.product-text');
+
+            if(img && text) {
+                gsap.to(text, {
+                    scrollTrigger: { trigger: section, start: "top 70%" },
+                    y: 0, opacity: 1, duration: 1, ease: "power3.out"
+                });
+                
+                // Determine direction based on class presence/visual layout
+                // Simple fade in and slide for image
+                gsap.to(img, {
+                    scrollTrigger: { trigger: section, start: "top 70%" },
+                    x: 0, opacity: 1, duration: 1.2, delay: 0.2, ease: "power3.out"
+                });
+            }
+        });
+    </script>
+</body>
+</html>
