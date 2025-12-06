@@ -149,3 +149,12 @@
 .bg-pattern {
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
+
+/* Custom Fonts */
+.font-special {
+  font-family: 'Special Elite', cursive;
+}
+
+.font-bodoni {
+  font-family: 'Bodoni Moda', serif;
+}
