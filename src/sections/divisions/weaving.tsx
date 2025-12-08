@@ -9,21 +9,24 @@ import SplitText from "@/components/SplitText/SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function PowerDivision() {
+export default function WeavingDivision() {
     const container = useRef<HTMLDivElement>(null);
     const img1Ref = useRef(null);
     const img2Ref = useRef(null);
+    const img3Ref = useRef(null);
     const titleContainerRef = useRef<HTMLDivElement>(null);
     const textContainerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(
         () => {
-            const images = [img1Ref.current, img2Ref.current];
+            // Images Animation
+            const images = [img1Ref.current, img2Ref.current, img3Ref.current];
 
+            // Set initial state
             gsap.set(images, {
                 opacity: 0,
                 clipPath: "inset(100% 0 0 0)",
-                y: 400,
+                y: 400
             });
 
             images.forEach((img, index) => {
@@ -35,27 +38,25 @@ export default function PowerDivision() {
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: container.current,
-                        start: "top 60%",
+                        start: "top 60%", // Adjusted trigger point
+                        toggleActions: "play none none none",
                     },
                     delay: index * 0.2,
                 });
             });
 
-            // Text Animations
+            // Text Animation
             if (titleContainerRef.current) {
-                // User code had "Power Generation" split by WORDS in the Ref Component code
-                // and used .split-word targeting or logic.
-                // My SplitText splits words if splitType="words".
-                gsap.from(titleContainerRef.current.querySelectorAll(".split-word"), {
+                gsap.from(titleContainerRef.current.querySelectorAll(".split-char"), {
                     yPercent: 100,
                     opacity: 0,
                     duration: 1.5,
-                    stagger: 0.1,
+                    stagger: 0.05,
                     ease: "power4.out",
                     scrollTrigger: {
                         trigger: container.current,
                         start: "top 60%",
-                    },
+                    }
                 });
             }
 
@@ -70,7 +71,7 @@ export default function PowerDivision() {
                     scrollTrigger: {
                         trigger: container.current,
                         start: "top 60%",
-                    },
+                    }
                 });
             }
         },
@@ -82,43 +83,50 @@ export default function PowerDivision() {
             ref={container}
             className="h-screen relative text-white flex justify-center items-center overflow-hidden bg-navy"
         >
-            <div
-                ref={titleContainerRef}
-                className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
-            >
+            {/* Background Title */}
+            <div ref={titleContainerRef} className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
                 <SplitText
-                    text="Power Generation"
-                    as="h2"
-                    splitType="words"
-                    className="text-white/10 text-[12vw] font-special select-none text-center leading-none"
+                    text="Weaving"
+                    splitType="chars"
+                    className="text-white/10 text-[16vw] font-special select-none"
                 />
             </div>
 
             <div className="flex justify-center items-center w-screen h-full relative px-4">
+                {/* Main Text */}
                 <div ref={textContainerRef} className="max-w-4xl text-center relative z-10">
                     <SplitText
+                        text="We have four hundred state of the art shuttleless looms capable of producing 100,000 meters daily. We are producing sheeting, lining, pocketing, herringbone, twills and much more."
                         splitType="words"
-                        text="The company boasts 25MW generation capabilities, which includes gas, heavy furnace oil, and solar power plants. Moreover, it has a grid 20MW. These power plants ensure cost-efficient operations and eliminate any chance of black-shutdowns which results in timely deliveries. We have relied on world leading brands to provide machinery such as Jenbacher, Wartsilla, Jinko for catering our energy needs."
-                        className="font-bodoni text-2xl md:text-3xl text-center leading-relaxed"
+                        className="font-bodoni text-2xl md:text-4xl text-center"
                     />
                 </div>
 
+                {/* Floating Images */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <Image
-                        src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1000"
-                        className="object-cover absolute top-12 right-4 md:right-1/4 mix-blend-exclusion opacity-70"
-                        height={300}
-                        width={300}
-                        ref={img1Ref}
-                        alt="Power generation facility"
-                    />
-                    <Image
-                        src="https://images.unsplash.com/photo-1565514020176-dbf2277cc112?q=80&w=1000"
-                        ref={img2Ref}
-                        className="object-cover absolute bottom-24 left-4 md:left-28 mix-blend-exclusion opacity-70"
+                        src="/devisions/weaving.avif"
+                        className="object-cover absolute bottom-12 left-4 md:left-20 mix-blend-exclusion opacity-80"
                         height={300}
                         width={400}
-                        alt="Solar power"
+                        ref={img1Ref}
+                        alt="Weaving process"
+                    />
+                    <Image
+                        src="/devisions/weaving2.jpg"
+                        ref={img2Ref}
+                        className="object-cover absolute top-24 right-4 md:right-18 mix-blend-exclusion opacity-80"
+                        height={300}
+                        width={400}
+                        alt="Loom machinery"
+                    />
+                    <Image
+                        src="/devisions/weaving3.jpg"
+                        ref={img3Ref}
+                        className="object-cover absolute top-14 right-1/2 translate-x-1/2 mix-blend-exclusion opacity-60"
+                        height={200}
+                        width={200}
+                        alt="Textile closeup"
                     />
                 </div>
             </div>

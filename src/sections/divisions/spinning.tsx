@@ -66,7 +66,7 @@ export default function SpinningDivision() {
             ref={container}
             className="h-screen relative text-white flex justify-center items-center overflow-hidden bg-navy"
         >
-            <SplitText
+            {/* <SplitText
                 text="Spinning"
                 as="h2"
                 splitType="chars"
@@ -75,7 +75,7 @@ export default function SpinningDivision() {
             // My SplitText implementation takes className and props but didn't explicitly implement ref forwarding.
             // I'll grab the ref via a wrapped div or update SplitText. 
             // For now, wrapping in a div to capture ref is safer if I didn't verify SplitText types.
-            />
+            /> */}
             {/* 
          Actually, to target the chars inside SplitText, I need a ref to the component root. 
          My SplitText component creates a Component (div by default) but didn't use forwardRef. 
@@ -85,7 +85,7 @@ export default function SpinningDivision() {
                 <SplitText
                     text="Spinning"
                     splitType="chars"
-                    className="text-white/10 text-[16vw] font-special select-none"
+                    className="text-white text-[16vw] font-special select-none mix-blend-exclusion"
                 />
             </div>
 
@@ -101,7 +101,7 @@ export default function SpinningDivision() {
 
                 <Image
                     ref={img1Ref}
-                    src="https://images.unsplash.com/photo-1621060025700-47cb2320df68?q=80&w=1000"
+                    src="/devisions/spinning.jpg"
                     className="object-cover absolute bottom-12 right-4 md:right-20 mix-blend-exclusion opacity-70"
                     height={300}
                     width={400}
@@ -109,7 +109,7 @@ export default function SpinningDivision() {
                 />
                 <Image
                     ref={img2Ref}
-                    src="https://images.unsplash.com/photo-1542059765-86db2542a223?q=80&w=1000"
+                    src="/devisions/spinning2.jpg"
                     className="object-cover absolute top-24 left-4 md:left-28 mix-blend-exclusion opacity-70"
                     height={300}
                     width={500}

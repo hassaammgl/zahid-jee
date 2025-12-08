@@ -105,7 +105,7 @@ export default function FinishingDivision() {
 
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <Image
-                        src="https://images.unsplash.com/photo-1605218427368-35b8013e8e45?q=80&w=1000"
+                        src="/devisions/stiching.jpg"
                         className="object-cover absolute bottom-12 left-4 md:left-20 mix-blend-exclusion opacity-80"
                         height={300}
                         width={300}
@@ -113,7 +113,7 @@ export default function FinishingDivision() {
                         alt="Finishing process"
                     />
                     <Image
-                        src="https://images.unsplash.com/photo-1550963295-018d0b005391?q=80&w=1000"
+                        src="/devisions/stitching2.avif"
                         className="object-cover absolute top-24 right-4 md:right-28 mix-blend-exclusion opacity-80"
                         ref={img2Ref}
                         height={300}
