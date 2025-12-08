@@ -1,3 +1,5 @@
+import ResponsiveBreakpointTester from "@/shared/ResponsiveTester";
+
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("@/shared/home/Hero"), {
@@ -26,6 +28,7 @@ export default function Home() {
       />
       <Hero />
       <About />
+      <ResponsiveBreakpointTester />
       <Gallery />
       <ScrollVelocity
         texts={[

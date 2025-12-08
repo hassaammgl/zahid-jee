@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahidjee Textile Mills Ltd | Divisions</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B1120',
+                        gold: '#C5A059',
+                        goldLight: '#E5D4B3',
+                        slate: '#F1F5F9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-divisions': "linear-gradient(rgba(11, 17, 32, 0.8), rgba(11, 17, 32, 0.6)), url('https://images.unsplash.com/photo-1612419983995-1c5c50c53443?q=80&w=2000&auto=format&fit=crop')",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 antialiased selection:bg-gold selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full top-0 z-50 transition-all duration-300 bg-navy/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 border border-gold flex items-center justify-center text-gold font-serif text-2xl font-bold group-hover:bg-gold group-hover:text-navy transition-all">Z</div>
+                <div class="leading-tight">
+                    <span class="block font-serif font-bold text-xl text-white tracking-wide">ZAHIDJEE</span>
+                    <span class="block text-[10px] text-gold uppercase tracking-[0.2em]">Textile Mills Ltd</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex gap-8 text-sm font-medium uppercase tracking-widest text-gray-300">
+                <a href="index.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Home</a>
+                <a href="divisions.html" class="text-gold border-b border-gold pb-1">Divisions</a>
+                <a href="products.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Products</a>
+                <a href="governance.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Governance</a>
+                <a href="investors.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Investors</a>
+                <a href="media.html" class="hover:text-gold transition-colors pb-1 border-b border-transparent hover:border-gold">Media</a>
+                <a href="contact.html" class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-navy transition-all">Contact</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="lg:hidden text-gold text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <section class="relative pt-40 pb-20 bg-hero-divisions bg-cover bg-center text-center">
+        <div class="max-w-4xl mx-auto px-6 relative z-10 animate-fade-in">
+            <span class="text-gold uppercase tracking-[0.3em] text-sm font-bold">Vertical Integration</span>
+            <h1 class="text-5xl md:text-6xl font-serif font-bold text-white mt-4 mb-6">Operational Divisions</h1>
+            <p class="text-gray-300 text-lg font-light max-w-2xl mx-auto">
+                Our manufacturing facilities are equipped with state-of-the-art technology, ensuring precision from fiber to finished product.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTIONS -->
+    <main class="py-20 overflow-hidden">
+        
+        <!-- DIVISION 1: SPINNING -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative group section-img opacity-0 translate-x-[-50px]">
+                    <div class="absolute -inset-4 border-2 border-gold/30 rounded-lg group-hover:border-gold transition-colors duration-500"></div>
+                    <img src="https://images.unsplash.com/photo-1621060025700-47cb2320df68?q=80&w=1000" alt="Spinning" class="relative rounded shadow-xl w-full h-[400px] object-cover">
+                    <div class="absolute bottom-6 left-6 bg-white p-4 shadow-lg">
+                        <i class="fas fa-dharmachakra text-3xl text-gold"></i>
+                    </div>
+                </div>
+                <div class="section-text opacity-0 translate-x-[50px]">
+                    <span class="text-gold font-bold uppercase tracking-widest text-sm">Step 01</span>
+                    <h2 class="text-4xl font-serif font-bold text-navy mt-2 mb-6">Spinning Division</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The foundation of our quality lies in our spinning units. We procure high-grade cotton to produce yarn that meets international standards. Our spinning facilities are capable of producing a wide range of counts, catering to the diverse needs of the global denim and knitting industries.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">High-grade raw cotton sourcing</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Coarse to fine yarn counts</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Advanced automated machinery</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIVISION 2: WEAVING -->
+        <section class="py-16 bg-slate">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 section-text opacity-0 translate-x-[-50px]">
+                    <span class="text-gold font-bold uppercase tracking-widest text-sm">Step 02</span>
+                    <h2 class="text-4xl font-serif font-bold text-navy mt-2 mb-6">Weaving Division</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our weaving units are equipped with the latest high-speed Air Jet looms. This allows us to manufacture premium quality fabrics with varied widths and weaves. We focus on producing defect-free grey fabric that serves as the perfect base for our finished products.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">High-speed Air Jet Looms</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Diverse weave structures (Percale, Satin, Twill)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Strict quality control protocols</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 md:order-2 relative group section-img opacity-0 translate-x-[50px]">
+                    <div class="absolute -inset-4 border-2 border-navy/10 rounded-lg group-hover:border-navy transition-colors duration-500"></div>
+                    <img src="https://images.unsplash.com/photo-1542059765-86db2542a223?q=80&w=1000" alt="Weaving" class="relative rounded shadow-xl w-full h-[400px] object-cover">
+                    <div class="absolute bottom-6 right-6 bg-navy p-4 shadow-lg">
+                        <i class="fas fa-scroll text-3xl text-gold"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIVISION 3: FINISHING & STITCHING -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative group section-img opacity-0 translate-x-[-50px]">
+                    <div class="absolute -inset-4 border-2 border-gold/30 rounded-lg group-hover:border-gold transition-colors duration-500"></div>
+                    <img src="https://images.unsplash.com/photo-1605218427368-35b8013e8e45?q=80&w=1000" alt="Finishing" class="relative rounded shadow-xl w-full h-[400px] object-cover">
+                    <div class="absolute bottom-6 left-6 bg-white p-4 shadow-lg">
+                        <i class="fas fa-tshirt text-3xl text-gold"></i>
+                    </div>
+                </div>
+                <div class="section-text opacity-0 translate-x-[50px]">
+                    <span class="text-gold font-bold uppercase tracking-widest text-sm">Step 03</span>
+                    <h2 class="text-4xl font-serif font-bold text-navy mt-2 mb-6">Finishing & Stitching</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        This division brings our textiles to life. We have a complete processing facility for dyeing, printing, and finishing fabrics. Our stitching unit converts these fabrics into high-end home textile products such as bed linen, curtains, and kitchen textiles, ready for global retail shelves.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Advanced dyeing and printing</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Automated stitching lines</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Export-ready packaging</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIVISION 4: POWER GENERATION -->
+        <section class="py-16 bg-slate">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 section-text opacity-0 translate-x-[-50px]">
+                    <span class="text-gold font-bold uppercase tracking-widest text-sm">Support</span>
+                    <h2 class="text-4xl font-serif font-bold text-navy mt-2 mb-6">Power Generation</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        To ensure uninterrupted production and meet strict delivery timelines, Zahidjee Textile Mills has established its own power generation plants. We use a mix of gas and diesel generators to maintain self-sufficiency, ensuring operational efficiency 24/7.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Self-sufficient energy production</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Mix of Gas and Diesel Engines</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="text-gray-700">Ensures 100% uptime for production</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 md:order-2 relative group section-img opacity-0 translate-x-[50px]">
+                    <div class="absolute -inset-4 border-2 border-navy/10 rounded-lg group-hover:border-navy transition-colors duration-500"></div>
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1000" alt="Power Generation" class="relative rounded shadow-xl w-full h-[400px] object-cover">
+                    <div class="absolute bottom-6 right-6 bg-navy p-4 shadow-lg">
+                        <i class="fas fa-bolt text-3xl text-gold"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CTA -->
+    <section class="py-20 bg-navy text-center">
+        <h2 class="text-3xl font-serif font-bold text-white mb-6">See what we produce</h2>
+        <a href="products.html" class="inline-block px-10 py-4 bg-gold text-navy font-bold tracking-widest uppercase hover:bg-white transition-colors duration-300">View Products</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="text-4xl text-gold font-serif font-bold">Z</div>
+                    <div>
+                        <span class="block font-serif font-bold text-2xl tracking-wide">ZAHIDJEE</span>
+                        <span class="block text-[10px] text-gold uppercase tracking-[0.2em]">Textile Mills Ltd</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 max-w-sm">
+                    Weaving excellence since 1987. A testament to Pakistan's industrial potential and global textile dominance.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-gold font-bold uppercase tracking-widest mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="divisions.html" class="hover:text-white transition-colors">Divisions</a></li>
+                    <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                    <li><a href="investors.html" class="hover:text-white transition-colors">Investor Relations</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-gold font-bold uppercase tracking-widest mb-6">Contact</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><i class="fas fa-map-marker-alt w-5"></i> Lahore, Pakistan</li>
+                    <li><i class="fas fa-phone w-5"></i> +92 42 35777290</li>
+                    <li><i class="fas fa-envelope w-5"></i> mis@zahidjee.com.pk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 text-center text-xs text-gray-500 uppercase tracking-widest">
+            &copy; 2025 Zahidjee Textile Mills Limited. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header Fade In
+        gsap.from(".animate-fade-in", {
+            y: 30, opacity: 0, duration: 1, delay: 0.2, ease: "power3.out"
+        });
+
+        // Content Sections Animation
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            const img = section.querySelector('.section-img');
+            const text = section.querySelector('.section-text');
+
+            if(img && text) {
+                gsap.to(img, {
+                    scrollTrigger: { trigger: section, start: "top 70%" },
+                    x: 0, opacity: 1, duration: 1, ease: "power3.out"
+                });
+                gsap.to(text, {
+                    scrollTrigger: { trigger: section, start: "top 70%" },
+                    x: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power3.out"
+                });
+            }
+        });
+    </script>
+</body>
+</html>
